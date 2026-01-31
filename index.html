@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ziya Brand</title>
+    <meta name="description" content="Ziya Brand — yüksək səviyyəli moda üçün müasir e-ticarət UI/UX">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">Ziya Brand</div>
+        <nav class="nav">
+          <a href="#men">Kişi</a>
+          <a href="#women">Qadın</a>
+          <a href="#kids">Uşaq</a>
+          <a href="#accessories">Aksesuar</a>
+        </nav>
+        <div class="header-actions">
+          <input type="search" placeholder="Axtarış" aria-label="Axtar">
+          <button class="btn header-cart" id="header-cart-btn" aria-label="Səbət">
+            <span class="cart-count" id="cart-count">0</span>
+            🛍️
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-layer hero-bg"></div>
+        <div class="hero-layer hero-image"></div>
+        <div class="hero-content">
+          <h1>Müasir Moda Kolleksiyaları</h1>
+          <p>Yüngül, sürətli və zərif alış-veriş təcrübəsi.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#women">Yeni Qadın Kolleksiyası</a>
+            <a class="btn" href="#men">Kişi Kolleksiyası</a>
+            <a class="btn" href="#kids">Uşaq Kolleksiyası</a>
+            <a class="btn" href="#accessories">Aksesuarlar</a>
+          </div>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="category" id="men">
+          <h2>Kişi</h2>
+          <div class="product-grid" data-category="men"></div>
+        </div>
+        <div class="category" id="women">
+          <h2>Qadın</h2>
+          <div class="product-grid" data-category="women"></div>
+        </div>
+        <div class="category" id="kids">
+          <h2>Uşaq</h2>
+          <div class="product-grid" data-category="kids"></div>
+        </div>
+        <div class="category" id="accessories">
+          <h2>Aksesuar</h2>
+          <div class="product-grid" data-category="accessories"></div>
+        </div>
+      </section>
+    </main>
+    <button class="floating-cart" id="floating-cart" aria-label="Səbətə bax">
+      🛒
+      <span class="cart-count" id="floating-cart-count">0</span>
+    </button>
+
+    <!-- Product detail modal -->
+    <div class="product-modal" id="product-modal" aria-hidden="true">
+      <div class="product-modal-backdrop" id="product-modal-backdrop"></div>
+      <div class="product-modal-content" id="product-modal-content">
+        <button class="product-modal-close" id="product-modal-close" aria-label="Bağla">×</button>
+        <div class="product-modal-body" id="product-modal-body"></div>
+      </div>
+    </div>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-header">
+          <h3>Səbət</h3>
+          <button class="cart-close" id="cart-close" aria-label="Bağla">×</button>
+        </div>
+        <div class="cart-drawer-body" id="cart-items"></div>
+        <div class="cart-drawer-footer">
+          <p class="cart-total">Cəmi: <strong>0 ₼</strong></p>
+          <button class="btn primary cart-checkout">Ödənişə keç</button>
+        </div>
+      </div>
+    </aside>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© 2026 Ziya Brand</div>
+        <div>Inter və Montserrat tipoqrafiya</div>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
