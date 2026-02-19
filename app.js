@@ -70,7 +70,6 @@ function onScroll() {
 }
 document.addEventListener('scroll', onScroll, { passive: true })
 onScroll()
-// Şəkillər — e-ticarət üçün uyumlu üslub (Ağ/boz fon, eyni ölçü 600x720)
 const IMG = (id) => `https://images.unsplash.com/photo-${id}?w=600&h=720&fit=crop&q=85`
 const products = [
   { id: 'm1', title: 'Kişi Klassik Gödəkçə', price: 89, category: 'men', brand: 'Ziya Essentials', sold: 2847, desc: 'Yüksək keyfiyyətli parça, klassik dizayn. Gündəlik və iş üçün ideal.', main: IMG('1594938298603-c8148c4dae35'), alt: IMG('1620799140408-edc6dcb6d633') },
